@@ -1,0 +1,36 @@
+# Node
+node_modules
+dist
+.env
+.DS_Store
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.venv
+venv
+build
+develop-eggs
+.eggs
+*.egg-info
+.coverage
+.tox
+htmlcov/
+.ipynb_checkpoints
+.pytest_cache
+.vscode/
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.bak
+
+# OS generated
+.DS_Store
+.Trashes
+Thumbs.db
