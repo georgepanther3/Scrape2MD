@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./scrape2md
+    container_name: scrape2md-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    environment:
+      - PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+
+  frontend:
+    build: 
+      context: ./scrape2md_website
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=http://localhost:8000
+    container_name: scrape2md-web
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
